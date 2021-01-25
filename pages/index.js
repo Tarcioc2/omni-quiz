@@ -5,6 +5,7 @@ import QuizLogo from "../src/components/QuizLogo";
 import QuizBackground from "../src/components/QuizBackground";
 import Footer from "../src/components/Footer";
 import GitHubCorner from "../src/components/GitHubCorner";
+import Head from "next/head";
 
 // const BackgroundImage = styled.div`
 //   background-image: url(${db.bg});
@@ -27,6 +28,28 @@ export const QuizContainer = styled.div`
 export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
+      <Head>
+        <title>Yugioh Quiz - AluraQuiz immersion</title>
+        <meta name="title" content="Yugioh Quiz - AluraQuiz immersion" />
+        <meta
+          name="description"
+          content="Simples Yugioh Quiz website created as a practice exercise for Alura's React Next.JS Immersion week"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="http://omni-quiz.tarcioc2.vercel.app/"
+        />
+        <meta property="og:title" content="Yugioh Quiz - AluraQuiz immersion" />
+        <meta
+          property="og:description"
+          content="Simples Yugioh Quiz website created as a practice exercise for Alura's React Next.JS Immersion week"
+        />
+        <meta
+          property="og:image"
+          content="https://cdn.game.tv/game-tv-content/images_2/default/game_banner/fed14e2721eb815840dc55347320d12b/en/fed14e2721eb815840dc55347320d12b.jpg"
+        ></meta>
+      </Head>
       <QuizContainer>
         <QuizLogo />
         <Widget>
